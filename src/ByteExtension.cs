@@ -17,13 +17,13 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>バイト配列からBASE64文字列へ変換します</summary>
         /// <seealso cref="Convert.ToBase64String(byte[])"/>
-        public static string Base64String(this byte[] self) {
+        public static string BytesToBase64(this byte[] self) {
             return Convert.ToBase64String(self);
         }
 
-        /// <summary>UTF8バイト配列から文字列へ変換します</summary>
-        public static string Utf8String(this byte[] self) {
-            return Encoding.UTF8.GetString(self);
+        /// <summary>UTF32バイト配列から文字列へ変換します</summary>
+        public static string Utf32BytesToString(this byte[] self) {
+            return Encoding.UTF32.GetString(self);
         }
     }
 }

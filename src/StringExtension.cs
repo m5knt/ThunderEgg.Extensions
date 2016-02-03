@@ -196,13 +196,13 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>BASE64文字列からバイト配列へ変換します</summary>
         /// <seealso cref="Convert.FromBase64String(string)"/>
-        public static byte[] Base64Bytes(this string self) {
+        public static byte[] Base64ToBytes(this string self) {
             return Convert.FromBase64String(self);
         }
 
-        /// <summary>UTF8バイト配列へ変換します</summary>
-        public static byte[] Utf8Bytes(this string self) {
-            return Encoding.UTF8.GetBytes(self);
+        /// <summary>UTF32バイト配列へ変換します</summary>
+        public static byte[] StringToUtf32Bytes(this string self) {
+            return Encoding.UTF32.GetBytes(self);
         }
     }
 }
