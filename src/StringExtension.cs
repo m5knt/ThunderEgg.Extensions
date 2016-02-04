@@ -200,9 +200,29 @@ namespace ThunderEgg.Extentions {
             return Convert.FromBase64String(self);
         }
 
+        /// <summary>UTF8バイト配列へ変換します</summary>
+        public static byte[] StringToUtf8Bytes(this string self) {
+            return Encoding.UTF8.GetBytes(self);
+        }
+
         /// <summary>UTF32バイト配列へ変換します</summary>
         public static byte[] StringToUtf32Bytes(this string self) {
             return Encoding.UTF32.GetBytes(self);
+        }
+
+        /// <summary>文字数を返します</summary>
+        public static int TrueLength(this string self) {
+            var count = 0;
+            var prev = '\0';
+            for(var i = 0; i < self.Length; ++i) {
+                var c = self[i];
+                if (char.IsSurrogatePair(prev, c)) {
+                    ++i;
+                }
+                prev = c;
+                ++count;
+            }
+            return count;
         }
     }
 }

@@ -21,6 +21,11 @@ namespace ThunderEgg.Extentions {
             return Convert.ToBase64String(self);
         }
 
+        /// <summary>UTF8バイト配列から文字列へ変換します</summary>
+        public static string Utf8BytesToString(this byte[] self) {
+            return Encoding.UTF8.GetString(self);
+        }
+
         /// <summary>UTF32バイト配列から文字列へ変換します</summary>
         public static string Utf32BytesToString(this byte[] self) {
             return Encoding.UTF32.GetString(self);
