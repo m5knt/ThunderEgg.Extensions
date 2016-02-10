@@ -26,10 +26,6 @@ namespace ThunderEgg.Extentions {
             return Encoding.UTF8.GetString(self);
         }
 
-        /// <summary>UTF32バイト配列から文字列へ変換します</summary>
-        public static string Utf32BytesToString(this byte[] self) {
-            return Encoding.UTF32.GetString(self);
-        }
     }
 }
 
