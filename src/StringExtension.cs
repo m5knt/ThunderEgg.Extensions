@@ -1,11 +1,15 @@
 ﻿/**
  * @file
- * @brief 文字列回りのシュガー
+ * @brief 文字列回りの拡張メソッド
  * @auther Yukio KANEDA
  */
 
 using System;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 // using System.Runtime.CompilerServices;
 // [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -14,6 +18,8 @@ namespace ThunderEgg.Extentions {
 
     /// <summary>stringの拡張メソッド関係</summary>
     public static class StringExtension {
+
+        #region static
 
         /// <summary>コピーを返す</summary>
         /// <seealso cref="string.Copy(string)"/>
@@ -65,21 +71,22 @@ namespace ThunderEgg.Extentions {
         }
 
         /// <summary>文字列を連結します</summary>
-        /// <seealso cref="string.Join(string, string[])"/>
-        public static string Join(this string separator, string[] value) {
-            return string.Join(separator, value);
+        public static string join(this string separator, params string[] values) {
+            return string.Join(separator, values);
         }
 
         /// <summary>文字列を連結します</summary>
-        /// <seealso cref="string.Join(string, string[], int, int)"/>
-        public static string Join(this string separator, string[] value, int startIndex, int count) {
-            return string.Join(separator, value, startIndex, count);
+        public static string join(this string separator, string[] values, int start, int count) {
+            return string.Join(separator, values, start, count);
         }
 
+        #endregion
+
         //
         //
         //
 
+#if false
         /// <summary>数値へ変換します</summary>
         /// <seealso cref="Convert.ToByte(string)"/>
         public static byte ToUInt8(this string self) {
@@ -193,6 +200,12 @@ namespace ThunderEgg.Extentions {
         public static double ToDouble(this string self) {
             return Convert.ToDouble(self);
         }
+#endif
+        //
+        //
+        //
+
+        #region option
 
         /// <summary>BASE64文字列からバイト配列へ変換します</summary>
         /// <seealso cref="Convert.FromBase64String(string)"/>
@@ -201,29 +214,27 @@ namespace ThunderEgg.Extentions {
         }
 
         /// <summary>UTF8バイト配列へ変換します</summary>
-        public static byte[] StringToUtf8Bytes(this string self) {
+        public static byte[] ToUtf8Bytes(this string self) {
             return Encoding.UTF8.GetBytes(self);
         }
 
-        /// <summary>UTF32バイト配列へ変換します</summary>
-        public static byte[] StringToUtf32Bytes(this string self) {
-            return Encoding.UTF32.GetBytes(self);
-        }
-
         /// <summary>文字数を返します</summary>
-        public static int TrueLength(this string self) {
+        public static int RealLength(this string self) {
             var count = 0;
-            var prev = '\0';
+            var hi = '\0';
             for(var i = 0; i < self.Length; ++i) {
-                var c = self[i];
-                if (char.IsSurrogatePair(prev, c)) {
+                var lo = self[i];
+                if (char.IsSurrogatePair(hi, lo)) {
                     ++i;
                 }
-                prev = c;
+                hi = lo;
                 ++count;
             }
             return count;
         }
+
+        #endregion
+
     }
 }
 
