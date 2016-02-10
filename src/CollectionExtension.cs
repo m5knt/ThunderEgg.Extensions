@@ -1,32 +1,72 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ThunderEgg.Extentions {
 
     public static partial class CollectionExtension {
 
-#if false
-        public static IList<T> Add<T>(this IList<T> self, IEnumerable<T> collection) {
-            foreach (var t in collection) {
-                self.Add(t);
-            }
-            return self;
+//        public static string Join(this IEnumerable<string> values, string sepa) {
+//            return string.Join(sepa, values.ToArray());
+//        }
+
+        /// <summary>値が含まれているか返します</summary>
+        public static bool In<T>(this T x, params T[] lists) {
+            return lists.Contains(x);
         }
 
-        public static IList<T> Add<T>(this IList<T> self, T value) {
-            self.Add(value);
-            return self;
+        /// <summary>値が含まれているか返します</summary>
+        public static bool In<T>(this T x, IEnumerable<T> lists) {
+            return lists.Contains(x);
         }
-#endif
-        /// <summary>例外を投げない辞書登録</summary>
-        public static void Update<D, K, V>(this D idictionary, K key, V value)
+
+        /// <summary>値が含まれているか返します</summary>
+        public static bool In<T>(this IEnumerable<T> x, params T[] lists) {
+            return x.All(_ => lists.Contains(_));
+        }
+
+        /// <summary>値が含まれているか返します</summary>
+        public static bool In<T>(this IEnumerable<T> x, IEnumerable<T> lists) {
+            return x.All(_ => lists.Contains(_));
+        }
+
+
+        /// <summary>値をコレクションに足します</summary>
+        public static C Add<C, V>(this C c, params V[] values)
+            where C : ICollection<V>
+        {
+            for (var i = 0; i < values.Length; ++i) c.Add(values[i]);
+            return c;
+        }
+
+        /// <summary>値をコレクションに足します</summary>
+        public static C Add<C, V>(this C c, IEnumerable<V> values)
+            where C : ICollection<V>
+        {
+            foreach (var t in values) c.Add(t);
+            return c;
+        }
+
+        /// <summary>値毎に処理をします</summary>
+        public static void ForEach<T>(this IEnumerable<T> x, Action<T> action) {
+            foreach (var t in x) action(t);
+        }
+
+        //
+        //
+        //
+
+        /// <summary>辞書の値を更新します</summary>
+        public static void Update<D, K, V>(this D x, K key, V value)
             where D : IDictionary<K, V> //
         {
-            if (idictionary.ContainsKey(key)) {
-                idictionary[key] = value;
+            if (x.ContainsKey(key)) {
+                x[key] = value;
             }
             else {
-                idictionary.Add(key, value);
+                x.Add(key, value);
             }
         }
 
