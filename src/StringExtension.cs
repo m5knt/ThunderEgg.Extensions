@@ -225,10 +225,12 @@ namespace ThunderEgg.Extentions {
             for(var i = 0; i < self.Length; ++i) {
                 var lo = self[i];
                 if (char.IsSurrogatePair(hi, lo)) {
-                    ++i;
+                    hi = '\0';
                 }
-                hi = lo;
-                ++count;
+                else {
+                    hi = lo;
+                    ++count;
+                }
             }
             return count;
         }

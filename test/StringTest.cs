@@ -31,19 +31,6 @@ namespace test {
         }
 
         [TestMethod]
-        public void To() {
-            Assert.AreEqual(1, "1".To<int>());
-            Assert.AreEqual(1, 1.1.To<int>());
-
-            Assert.AreEqual(null, ((string)null).To<int?>());
-            Assert.AreEqual(null, "".To<int?>());
-            Assert.AreEqual(null, "a".To<int?>());
-
-            Assert.AreEqual(1, "a".To<int>(1));
-        }
-
-
-        [TestMethod]
         public void Join() {
             var a = "a".join(new[] { "1", "2","3" }, 1, 2);
             Assert.AreEqual("2a3", a);
@@ -73,18 +60,18 @@ namespace test {
         [TestMethod]
         public void Base64() {
             var src = new byte[] { 0xaa, 0x55 };
-            var a = System.Convert.ToBase64String(src);
+            var a = Convert.ToBase64String(src);
             var b = src.BytesToBase64();
             Assert.IsTrue(a.SequenceEqual(b));
-            var x = System.Convert.FromBase64String(a);
+            var x = Convert.FromBase64String(a);
             var y = b.Base64ToBytes();
             Assert.IsTrue(x.SequenceEqual(y));
         }
 
         [TestMethod]
         public void RealLength() {
-            Assert.AreEqual(1, "薙".RealLength());
-            Assert.AreEqual(2, "aあ".RealLength());
+            Assert.AreEqual(5, "\ud800\udf84あ\ud800\udf84".Length);
+            Assert.AreEqual(3, "\ud800\udf84あ\ud800\udf84".RealLength());
         }
     }
 }
