@@ -13,7 +13,7 @@ using System.Text;
 namespace ThunderEgg.Extentions {
 
     /// <summary>byteの拡張メソッド関係</summary>
-    public static class ByteExtension {
+    public static class ByteArrayExtension {
 
         /// <summary>バイト配列からBASE64文字列へ変換します</summary>
         /// <seealso cref="Convert.ToBase64String(byte[])"/>
