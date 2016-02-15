@@ -113,13 +113,13 @@ namespace ThunderEgg.Extentions {
         public static char ToLower(this char c) {
             return char.ToLower(c);
         }
-
+#if false
         /// <summary>指定カルチャ規則で小文字化して返す</summary>
         /// <seealso cref="char.ToLower(char, CultureInfo)"/>
         public static char ToLower(this char c, CultureInfo culture) {
             return char.ToLower(c, culture);
         }
-
+#endif
         /// <summary>インバリアントカルチャ規則で小文字化して返す</summary>
         /// <seealso cref="char.ToLowerInvariant(char)"/>
         public static char ToLowerInvariant(this char c) {
@@ -137,13 +137,13 @@ namespace ThunderEgg.Extentions {
         public static char ToUpper(this char c) {
             return char.ToUpper(c);
         }
-
+#if false
         /// <summary>指定カルチャ規則で大文字化して返す</summary>
         /// <seealso cref="char.ToUpper(char, CultureInfo)"/>
         public static char ToUpper(this char c, CultureInfo culture) {
             return char.ToUpper(c, culture);
         }
-
+#endif
         /// <summary>インバリアントカルチャ規則で大文字化して返す</summary>
         /// <seealso cref="char.ToUpperInvariant(char)"/>
         public static char ToUpperInvariant(this char c) {
