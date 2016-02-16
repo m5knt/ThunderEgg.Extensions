@@ -10,9 +10,10 @@ namespace ThunderEgg.Extentions {
     /// <summary>IConvertible回り</summary>
     public static class ConvertibleExtension {
 
-        /// <summary>値の型を変換します</summary>
-        /// <returns>型を変換した値</returns>
-        public static T To<T>(this IConvertible self) {
+        /// <summary>型変換します</summary>
+        /// <returns>型変換した値 / 失敗時は型のデフォルト値</returns>
+        public static T To<T>(this IConvertible self)
+        {
             var t = typeof(T);
             t = Nullable.GetUnderlyingType(t) ?? t;
             try {
@@ -23,9 +24,9 @@ namespace ThunderEgg.Extentions {
             }
         }
 
-        /// <summary>値の型を変換します</summary>
-        /// <param name="default">失敗時の値</param>
-        /// <returns>型を変換した値</returns>
+        /// <summary>型変換します</summary>
+        /// <param name="@default">失敗時の値</param>
+        /// <returns>型変換した値 / 失敗時は @default を返します</returns>
         public static T To<T>(this IConvertible self, T @default) {
             var t = typeof(T);
             t = Nullable.GetUnderlyingType(t) ?? t;
@@ -36,6 +37,40 @@ namespace ThunderEgg.Extentions {
                 return @default;
             }
         }
+
+        /// <summary>型変換します</summary>
+        /// <returns>型変換した値 / 失敗時は型のデフォルト値</returns>
+        public static T To<T>(this string self) {
+            var t = typeof(T);
+            t = Nullable.GetUnderlyingType(t) ?? t;
+            try {
+                if (t.IsEnum) {
+                    return (T)Enum.Parse(t, self);
+                }
+                return (T)Convert.ChangeType(self, t);
+            }
+            catch {
+                return default(T);
+            }
+        }
+
+        /// <summary>型変換します</summary>
+        /// <param name="@default">失敗時の値</param>
+        /// <returns>型変換した値 / 失敗時は @default を返します</returns>
+        public static T To<T>(this string self, T @default) {
+            var t = typeof(T);
+            t = Nullable.GetUnderlyingType(t) ?? t;
+            try {
+                if (t.IsEnum) {
+                    return (T)Enum.Parse(t, self);
+                }
+                return (T)Convert.ChangeType(self, t);
+            }
+            catch {
+                return @default;
+            }
+        }
+
     }
 }
 
