@@ -1,5 +1,5 @@
 ﻿/**
- * @brief StringBuffer回り
+ * @brief Enumerable関係のエクステンションメソッド
  */
 
 using System;
@@ -38,7 +38,7 @@ namespace ThunderEgg.Extentions {
         }
     }
 
-    /// <summary>IEnumerable回り</summary>
+    /// <summary>Enumerable関係のエクステンションメソッド</summary>
     public static class EnumerableExtension {
 
         /// <summary>値を指定回数繰り返します</summary>
@@ -67,13 +67,6 @@ namespace ThunderEgg.Extentions {
             var i = 0;
             foreach (var t in e) yield return func(t, i++);
         }
-
-#if false
-        /// <summary>値を指定回数繰り返します</summary>
-        public static IEnumerable<T> Times<T>(this int self, Func<int, T> func) {
-            for (var i = 0; i < self; ++i) yield return func(i);
-        }
-#endif
 
     }
 }
