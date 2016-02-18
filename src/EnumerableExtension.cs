@@ -1,23 +1,21 @@
 ﻿/**
+ * @file
  * @brief Enumerable関係のエクステンションメソッド
  */
 
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using System.Linq;
 
 namespace ThunderEgg.Extentions {
 
     public static partial class A {
 
-        /// <summary>値を列挙します</summary>
+        /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int end) {
             for (var i = 0; i < end; ++i) yield return i;
         }
 
-        /// <summary>値を列挙します</summary>
+        /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end) {
             if (start < end) {
                 for (var i = start; i < end; ++i) yield return i;
@@ -27,7 +25,7 @@ namespace ThunderEgg.Extentions {
             }
         }
 
-        /// <summary>値を列挙します</summary>
+        /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end, int step) {
             if (start < end) {
                 for (var i = start; i < end; i += step) yield return i;
