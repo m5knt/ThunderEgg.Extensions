@@ -49,11 +49,6 @@ namespace ThunderEgg.Extentions {
             return c;
         }
 
-        /// <summary>値毎に処理をします</summary>
-        public static void ForEach<T>(this IEnumerable<T> x, Action<T> action) {
-            foreach (var t in x) action(t);
-        }
-
         //
         //
         //
