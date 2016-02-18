@@ -53,7 +53,7 @@
     <Compile Include="src\MathExtension.cs" />
     <Compile Include="src\ConvertibleExtension.cs" />
     <Compile Include="src\StringBuilderExtension.cs" />
-    <Compile Include="src\ByteExtension.cs" />
+    <Compile Include="src\ByteArrayExtension.cs" />
     <Compile Include="src\StringExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
