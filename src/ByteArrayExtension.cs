@@ -26,6 +26,10 @@ namespace ThunderEgg.Extentions {
             return Encoding.UTF8.GetString(self);
         }
 
+        /// <summary>ArraySegmentへ変換します</summary>
+        public static ArraySegment<byte> ToArraySegment(this byte[] self, int offset, int count) {
+            return new ArraySegment<byte>(self, offset, count);
+        }
     }
 }
 
