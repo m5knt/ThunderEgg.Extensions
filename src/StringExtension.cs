@@ -19,7 +19,7 @@ namespace ThunderEgg.Extentions {
     /// <summary>stringの拡張メソッド関係</summary>
     public static class StringExtension {
 
-        #region static
+        #region static methods
 
         /// <summary>コピーを返す</summary>
         /// <seealso cref="string.Copy(string)"/>
@@ -86,125 +86,6 @@ namespace ThunderEgg.Extentions {
         //
         //
 
-#if false
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToByte(string)"/>
-        public static byte ToUInt8(this string self) {
-            return Convert.ToByte(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt16(string)"/>
-        public static UInt16 ToUInt16(this string self) {
-            return Convert.ToUInt16(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt32(string)"/>
-        public static UInt32 ToUInt32(this string self) {
-            return Convert.ToUInt32(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt64(string)"/>
-        public static UInt64 ToUInt64(this string self) {
-            return Convert.ToUInt64(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToSByte(string)"/>
-        public static sbyte ToInt8(this string self) {
-            return Convert.ToSByte(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt16(string)"/>
-        public static Int16 ToInt16(this string self) {
-            return Convert.ToInt16(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt32(string)"/>
-        public static Int32 ToInt32(this string self) {
-            return Convert.ToInt32(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt64(string)"/>
-        public static Int64 ToInt64(this string self) {
-            return Convert.ToInt64(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToByte(string, int)"/>
-        public static byte ToUInt8(this string self, int fbase) {
-            return Convert.ToByte(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt16(string, int)"/>
-        public static UInt16 ToUInt16(this string self, int fbase) {
-            return Convert.ToUInt16(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt32(string, int)"/>
-        public static UInt32 ToUInt32(this string self, int fbase) {
-            return Convert.ToUInt32(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToUInt64(string, int)"/>
-        public static UInt64 ToUInt64(this string self, int fbase) {
-            return Convert.ToUInt64(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToSByte(string, int)"/>
-        public static sbyte ToInt8(this string self, int fbase) {
-            return Convert.ToSByte(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt16(string, int)"/>
-        public static Int16 ToInt16(this string self, int fbase) {
-            return Convert.ToInt16(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt32(string, int)"/>
-        public static Int32 ToInt32(this string self, int fbase) {
-            return Convert.ToInt32(self, fbase);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToInt64(string, int)"/>
-        public static Int64 ToInt64(this string self, int fbase) {
-            return Convert.ToInt64(self, fbase);
-        }
-
-        /// <summary>論理値へ変換します</summary>
-        /// <seealso cref="Convert.ToBoolean(string)"/>
-        public static bool ToBoolean(this string self) {
-            return Convert.ToBoolean(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToSingle(string)"/>
-        public static float ToSingle(this string self) {
-            return Convert.ToSingle(self);
-        }
-
-        /// <summary>数値へ変換します</summary>
-        /// <seealso cref="Convert.ToDouble(string)"/>
-        public static double ToDouble(this string self) {
-            return Convert.ToDouble(self);
-        }
-#endif
-        //
-        //
-        //
-
         #region option
 
         /// <summary>BASE64文字列からバイト配列へ変換します</summary>
@@ -231,8 +112,6 @@ namespace ThunderEgg.Extentions {
             }
             return count;
         }
-
-        #endregion
 
     }
 }
