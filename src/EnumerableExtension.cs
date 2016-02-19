@@ -27,11 +27,14 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end, int step) {
-            if (start < end) {
+            if (start < end && step > 0) {
                 for (var i = start; i < end; i += step) yield return i;
             }
-            else {
+            else if (start > end && step < 0) {
                 for (var i = start; i > end; i += step) yield return i;
+            }
+            else {
+                throw new InvalidOperationException("step");
             }
         }
     }
