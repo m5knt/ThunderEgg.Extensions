@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace test {
 
     [TestClass]
-    public class EnumerableTest {
+    public class CollectionTest {
 
         [TestMethod]
         public void In() {
