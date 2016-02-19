@@ -18,23 +18,23 @@ namespace ThunderEgg.Extentions {
         /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end) {
             if (start < end) {
-                for (var i = start; i < end; ++i) yield return i;
+                for (; start < end; ++start) yield return start;
             }
             else {
-                for (var i = start; i > end; --i) yield return i;
+                for (; start > end; --start) yield return start;
             }
         }
 
         /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end, int step) {
             if (start < end && step > 0) {
-                for (var i = start; i < end; i += step) yield return i;
+                for (; start < end; start += step) yield return start;
             }
             else if (start > end && step < 0) {
-                for (var i = start; i > end; i += step) yield return i;
+                for (; start > end; start += step) yield return start;
             }
             else {
-                throw new InvalidOperationException("step");
+                throw new ArgumentException();
             }
         }
     }
@@ -43,30 +43,19 @@ namespace ThunderEgg.Extentions {
     public static class EnumerableExtension {
 
         /// <summary>値を指定回数繰り返します</summary>
-        public static IEnumerable<T> Repeat<T>(this T self, int limit) {
-            for (var i = 0; i < limit; ++i) yield return self;
+        public static IEnumerable<T> Repeat<T>(this T t, int limit) {
+            for (var i = 0; i < limit; ++i) yield return t;
         }
 
         /// <summary>値毎に処理をします</summary>
-        public static void Do<T>(this IEnumerable<T> e, Action<T> func) {
-            foreach (var t in e) func(t);
+        public static void Do<T>(this IEnumerable<T> e, Action<T> f) {
+            foreach (var t in e) f(t);
         }
 
         /// <summary>値毎に処理をします</summary>
-        public static void Do<T>(this IEnumerable<T> e, Action<T, int> func) {
+        public static void Do<T>(this IEnumerable<T> e, Action<T, int> f) {
             var i = 0;
-            foreach (var t in e) func(t, i++);
-        }
-
-        /// <summary>値毎に処理をします</summary>
-        public static IEnumerable<E> Do<T, E>(this IEnumerable<T> e, Func<T, E> func) {
-            foreach (var t in e) yield return func(t);
-        }
-
-        /// <summary>値毎に処理をします</summary>
-        public static IEnumerable<E> Do<T, E>(this IEnumerable<T> e, Func<T, int, E> func) {
-            var i = 0;
-            foreach (var t in e) yield return func(t, i++);
+            foreach (var t in e) f(t, i++);
         }
 
     }

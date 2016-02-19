@@ -25,10 +25,6 @@ namespace test {
             ret = new List<int>();
             0.Repeat(3).Do((_, i) => ret.Add(i));
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
-            ret = 0.Repeat(3).Do(_ => _).ToList();
-            Assert.IsTrue(new[] { 0, 0, 0 }.SequenceEqual(ret));
-            ret = 0.Repeat(3).Do((_, i) => i).ToList();
-            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
         }
 
         [TestMethod]
