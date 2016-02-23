@@ -1,6 +1,6 @@
 ﻿/**
  * @file
- * @brief Enumerable関係のエクステンションメソッド
+ * @brief 任意の範囲の数値を列挙
  */
 
 using System;
@@ -39,25 +39,5 @@ namespace ThunderEgg.Extentions {
         }
     }
 
-    /// <summary>Enumerable関係のエクステンションメソッド</summary>
-    public static class EnumerableExtension {
-
-        /// <summary>値を指定回数繰り返します</summary>
-        public static IEnumerable<T> Repeat<T>(this T t, int limit) {
-            for (var i = 0; i < limit; ++i) yield return t;
-        }
-
-        /// <summary>値毎に処理をします</summary>
-        public static void Do<T>(this IEnumerable<T> e, Action<T> f) {
-            foreach (var t in e) f(t);
-        }
-
-        /// <summary>値毎に処理をします</summary>
-        public static void Do<T>(this IEnumerable<T> e, Action<T, int> f) {
-            var i = 0;
-            foreach (var t in e) f(t, i++);
-        }
-
-    }
 }
 

@@ -19,7 +19,13 @@ namespace ThunderEgg.Extentions {
             try {
                 return (T)Convert.ChangeType(self, t);
             }
-            catch (Exception) {
+            catch (InvalidCastException) {
+                return default(T);
+            }
+            catch (FormatException) {
+                return default(T);
+            }
+            catch (OverflowException) {
                 return default(T);
             }
         }
@@ -35,7 +41,13 @@ namespace ThunderEgg.Extentions {
                 }
                 return (T)Convert.ChangeType(self, t);
             }
-            catch (Exception) {
+            catch (InvalidCastException) {
+                return default(T);
+            }
+            catch (FormatException) {
+                return default(T);
+            }
+            catch (OverflowException) {
                 return default(T);
             }
         }

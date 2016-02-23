@@ -1,1 +1,1 @@
-# ThunderEggExtentions
+# ThunderEgg.Extentions

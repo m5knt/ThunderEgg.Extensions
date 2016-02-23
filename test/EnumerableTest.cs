@@ -20,10 +20,10 @@ namespace test {
         public void Do() {
             List<int> ret;
             ret = new List<int>();
-            0.Repeat(3).Do(_ => ret.Add(_));
+            0.Repeat(3).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, 0, 0 }.SequenceEqual(ret));
             ret = new List<int>();
-            0.Repeat(3).Do((_, i) => ret.Add(i));
+            0.Repeat(3).ForEach((_, i) => ret.Add(i));
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
         }
 
@@ -31,16 +31,16 @@ namespace test {
         public void Range() {
             List<int> ret;
             ret = new List<int>();
-            A.Range(3).Do(_ => ret.Add(_));
+            A.Range(3).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
             ret = new List<int>();
-            A.Range(0, 3).Do(_ => ret.Add(_));
+            A.Range(0, 3).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
             ret = new List<int>();
-            A.Range(0, 5, 2).Do(_ => ret.Add(_));
+            A.Range(0, 5, 2).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, 2, 4 }.SequenceEqual(ret));
             ret = new List<int>();
-            A.Range(0, -3, -1).Do(_ => ret.Add(_));
+            A.Range(0, -3, -1).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, -1, -2 }.SequenceEqual(ret));
             A.Range(4).Select(_ => _);
         }

@@ -48,9 +48,14 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\CharExtension.cs" />
-    <Compile Include="src\CollectionExtension.cs" />
-    <Compile Include="src\EnumerableExtension.cs" />
-    <Compile Include="src\DateTime.cs" />
+    <Compile Include="src\Add.cs" />
+    <Compile Include="src\At.cs" />
+    <Compile Include="src\Repeat.cs" />
+    <Compile Include="src\Range.cs" />
+    <Compile Include="src\In.cs" />
+    <Compile Include="src\TimeSpanExtension.cs" />
+    <Compile Include="src\ForEach.cs" />
+    <Compile Include="src\DateTimeExtension.cs" />
     <Compile Include="src\MathExtension.cs" />
     <Compile Include="src\ConvertibleExtension.cs" />
     <Compile Include="src\StringBuilderExtension.cs" />
