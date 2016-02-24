@@ -12,7 +12,7 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>値を指定回数繰り返します</summary>
         public static IEnumerable<T> Repeat<T>(this T val, int repeat) {
-            for (var i = 0; i < repeat; ++i) yield return val;
+            while (--repeat >= 0) yield return val;
         }
     }
 }

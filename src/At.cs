@@ -1,8 +1,9 @@
 ﻿/**
- * @file
- * @brief At操作
- */
+* @file
+* @brief At操作
+*/
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,16 +23,15 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>指定キーの値を返します</summary>
         public static T At<K, T>(this IDictionary<K, T> dict, K key) {
-            if (dict.ContainsKey(key)) {
-                return dict[key];
-            }
-            throw new KeyNotFoundException();
+            return dict[key];
         }
 
         /// <summary>指定キーの値を返します</summary>
         public static T AtOrDefault<K, T>(this IDictionary<K, T> dict, K key) {
-            if (dict.ContainsKey(key)) {
+            try {
                 return dict[key];
+            }
+            catch (KeyNotFoundException) {
             }
             return default(T);
         }
@@ -40,11 +40,10 @@ namespace ThunderEgg.Extentions {
         public static IDictionary<K, T> At<K, T>( //
             this IDictionary<K, T> dict, K key, T value)
         {
-            if (dict.ContainsKey(key)) {
-                dict[key] = value;
-            }
-            else {
+            try {
                 dict.Add(key, value);
+            }
+            catch (ArgumentException) {
             }
             return dict;
         }
