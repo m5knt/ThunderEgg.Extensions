@@ -24,22 +24,11 @@ namespace test {
         }
 
         [TestMethod]
-        public void Each() {
+        public void ForEach() {
             List<int> ret;
             ret = new List<int>();
             A.Range(3).ForEach(_ => ret.Add(_));
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
-            ret = new List<int>();
-            A.Range(0, 3).ForEach(_ => ret.Add(_));
-            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(ret));
-            ret = new List<int>();
-            A.Range(0, 5, 2).ForEach(_ => ret.Add(_));
-            Assert.IsTrue(new[] { 0, 2, 4 }.SequenceEqual(ret));
-            ret = new List<int>();
-            A.Range(0, -3, -1).ForEach(_ => ret.Add(_));
-            Assert.IsTrue(new[] { 0, -1, -2 }.SequenceEqual(ret));
-            A.Range(4).Select(_ => _);
         }
-
     }
 }
