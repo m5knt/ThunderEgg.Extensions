@@ -12,24 +12,24 @@ namespace ThunderEgg.Extentions {
     public static partial class A {
 
         /// <summary>指定位置の値を返します</summary>
-        public static T At<T>(this IEnumerable<T> enumer, int index) {
-            return enumer.ElementAt(index);
+        public static T At<T>(this IEnumerable<T> self, int index) {
+            return self.ElementAt(index);
         }
 
         /// <summary>指定位置の値を返します</summary>
-        public static T AtOrDefault<T>(this IEnumerable<T> enumer, int index) {
-            return enumer.ElementAtOrDefault(index);
+        public static T AtOrDefault<T>(this IEnumerable<T> self, int index) {
+            return self.ElementAtOrDefault(index);
         }
 
         /// <summary>指定キーの値を返します</summary>
-        public static T At<K, T>(this IDictionary<K, T> dict, K key) {
-            return dict[key];
+        public static T At<K, T>(this IDictionary<K, T> self, K key) {
+            return self[key];
         }
 
         /// <summary>指定キーの値を返します</summary>
-        public static T AtOrDefault<K, T>(this IDictionary<K, T> dict, K key) {
+        public static T AtOrDefault<K, T>(this IDictionary<K, T> self, K key) {
             try {
-                return dict[key];
+                return self[key];
             }
             catch (KeyNotFoundException) {
             }
@@ -38,14 +38,14 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>辞書の値を更新します</summary>
         public static IDictionary<K, T> At<K, T>( //
-            this IDictionary<K, T> dict, K key, T value)
+            this IDictionary<K, T> self, K key, T value)
         {
             try {
-                dict.Add(key, value);
+                self.Add(key, value);
             }
             catch (ArgumentException) {
             }
-            return dict;
+            return self;
         }
 
         //

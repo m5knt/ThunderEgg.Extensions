@@ -11,18 +11,18 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>値をコレクションに足します</summary>
         public static ICollection<T> Add<T>( //
-            this ICollection<T> colection, params T[] vals) //
+            this ICollection<T> self, params T[] vals) //
         {
-            for (var i = 0; i < vals.Length; ++i) colection.Add(vals[i]);
-            return colection;
+            for (var i = 0; i < vals.Length; ++i) self.Add(vals[i]);
+            return self;
         }
 
         /// <summary>値をコレクションに足します</summary>
         public static ICollection<T> Add<T>( //
-            this ICollection<T> collection, IEnumerable<T> vals) //
+            this ICollection<T> self, IEnumerable<T> vals) //
         {
-            foreach (var t in vals) collection.Add(t);
-            return collection;
+            foreach (var t in vals) self.Add(t);
+            return self;
         }
     }
 }

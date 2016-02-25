@@ -11,8 +11,8 @@ namespace ThunderEgg.Extentions {
     public static partial class A {
 
         /// <summary>値を指定回数繰り返します</summary>
-        public static IEnumerable<T> Repeat<T>(this T val, int repeat) {
-            while (--repeat >= 0) yield return val;
+        public static IEnumerable<T> Repeat<T>(this T self, int repeat) {
+            while (--repeat >= 0) yield return self;
         }
     }
 }
