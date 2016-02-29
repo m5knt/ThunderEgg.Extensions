@@ -50,6 +50,7 @@
     <Compile Include="src\CharExtension.cs" />
     <Compile Include="src\Add.cs" />
     <Compile Include="src\At.cs" />
+    <Compile Include="src\UnixTimeExtension.cs" />
     <Compile Include="src\Repeat.cs" />
     <Compile Include="src\Range.cs" />
     <Compile Include="src\In.cs" />

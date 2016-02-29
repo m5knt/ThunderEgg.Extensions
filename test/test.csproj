@@ -50,6 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnixTimeTest.cs" />
+    <Compile Include="DateTimeTest.cs" />
+    <Compile Include="Add.cs" />
     <Compile Include="Misc.cs" />
     <Compile Include="EnumerableTest.cs" />
     <Compile Include="CollectionTest.cs" />
