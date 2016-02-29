@@ -13,28 +13,38 @@ namespace ThunderEgg.Extentions {
     public static partial class TimeSpanExtension {
 
         /// <summary>時間を返します</summary>
-        public static TimeSpan Days(this int n) {
-            return new TimeSpan(n, 0, 0, 0);
+        public static TimeSpan Days(this long days) {
+            var ticks = TimeSpan.TicksPerDay * days;
+            return TimeSpan.FromTicks(ticks);
         }
 
         /// <summary>時間を返します</summary>
-        public static TimeSpan Hours(this int n) {
-            return new TimeSpan(n, 0, 0);
+        public static TimeSpan Hours(this long hours) {
+            var ticks = TimeSpan.TicksPerHour * hours;
+            return TimeSpan.FromTicks(ticks);
         }
 
         /// <summary>時間を返します</summary>
-        public static TimeSpan Minutes(this int n) {
-            return new TimeSpan(0, n, 0);
+        public static TimeSpan Minutes(this long mins) {
+            var ticks = TimeSpan.TicksPerMinute * mins;
+            return TimeSpan.FromTicks(ticks);
         }
 
         /// <summary>時間を返します</summary>
-        public static TimeSpan Seconds(this int n) {
-            return new TimeSpan(0, 0, n);
+        public static TimeSpan Seconds(this long secs) {
+            var ticks = TimeSpan.TicksPerSecond * secs;
+            return TimeSpan.FromTicks(ticks);
         }
 
         /// <summary>時間を返します</summary>
-        public static TimeSpan MilliSeconds(this int n) {
-            return new TimeSpan(0, 0, 0, 0, n);
+        public static TimeSpan MilliSeconds(this long msecs) {
+            var ticks = TimeSpan.TicksPerMillisecond * msecs;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
+        public static TimeSpan Ticks(this long ticks) {
+            return TimeSpan.FromTicks(ticks);
         }
     }
 }
