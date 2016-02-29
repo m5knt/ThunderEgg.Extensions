@@ -11,9 +11,6 @@ namespace ThunderEgg.Extentions {
 
     public static partial class A {
 
-        /// <summary>Unixエポック</summary>
-        static DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-
         /// <summary>月の初日</summary>
         public static DateTime FirstDayOfMonth(this DateTime self) {
             var t = 1 - self.Day;
@@ -25,8 +22,6 @@ namespace ThunderEgg.Extentions {
             var t = DateTime.DaysInMonth(self.Year, self.Month) - self.Day;
             return t == 0 ? self : self.AddDays(t);
         }
-
-        public static DateTime 
     }
 }
 

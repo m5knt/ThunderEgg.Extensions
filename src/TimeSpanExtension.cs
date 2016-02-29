@@ -13,6 +13,36 @@ namespace ThunderEgg.Extentions {
     public static partial class TimeSpanExtension {
 
         /// <summary>時間を返します</summary>
+        public static TimeSpan Days(this int days) {
+            var ticks = TimeSpan.TicksPerDay * days;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
+        public static TimeSpan Hours(this int hours) {
+            var ticks = TimeSpan.TicksPerHour * hours;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
+        public static TimeSpan Minutes(this int mins) {
+            var ticks = TimeSpan.TicksPerMinute * mins;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
+        public static TimeSpan Seconds(this int secs) {
+            var ticks = TimeSpan.TicksPerSecond * secs;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
+        public static TimeSpan MilliSeconds(this int msecs) {
+            var ticks = TimeSpan.TicksPerMillisecond * msecs;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        /// <summary>時間を返します</summary>
         public static TimeSpan Days(this long days) {
             var ticks = TimeSpan.TicksPerDay * days;
             return TimeSpan.FromTicks(ticks);
