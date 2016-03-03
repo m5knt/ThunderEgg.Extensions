@@ -50,13 +50,13 @@
     <Compile Include="src\CharExtension.cs" />
     <Compile Include="src\Add.cs" />
     <Compile Include="src\At.cs" />
-    <Compile Include="src\UnixTimeExtension.cs" />
+    <Compile Include="src\DateTime\UTC.cs" />
     <Compile Include="src\Repeat.cs" />
     <Compile Include="src\Range.cs" />
     <Compile Include="src\In.cs" />
-    <Compile Include="src\TimeSpanExtension.cs" />
+    <Compile Include="src\DateTime\TimeSpanExtension.cs" />
     <Compile Include="src\ForEach.cs" />
-    <Compile Include="src\DateTimeExtension.cs" />
+    <Compile Include="src\DateTime\DateTimeExtension.cs" />
     <Compile Include="src\MathExtension.cs" />
     <Compile Include="src\ConvertibleExtension.cs" />
     <Compile Include="src\StringBuilderExtension.cs" />
