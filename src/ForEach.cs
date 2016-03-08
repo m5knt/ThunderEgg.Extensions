@@ -12,17 +12,17 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>値毎に処理をします</summary>
         public static void ForEach<T>( //
-            this IEnumerable<T> self, Action<T> func) //
+            this IEnumerable<T> @this, Action<T> func) //
         {
-            foreach (var t in self) func(t);
+            foreach (var t in @this) func(t);
         }
 
         /// <summary>値毎に処理をします</summary>
         public static void ForEach<T>( //
-            this IEnumerable<T> self, Action<T, int> func) //
+            this IEnumerable<T> @this, Action<T, int> func) //
         {
             var i = 0;
-            foreach (var t in self) func(t, i++);
+            foreach (var t in @this) func(t, i++);
         }
 
     }

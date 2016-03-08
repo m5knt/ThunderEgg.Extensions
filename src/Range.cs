@@ -17,6 +17,7 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>数値を列挙します</summary>
         public static IEnumerable<int> Range(int start, int end) {
+            //Comparer<T>.Default
             if (start < end) {
                 for (; start < end; ++start) yield return start;
             }

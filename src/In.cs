@@ -12,25 +12,25 @@ namespace ThunderEgg.Extentions {
     public static partial class A {
 
         /// <summary>値が含まれているか返します</summary>
-        public static bool In<T>(this T self, params T[] vals) {
-            return vals.Contains(self);
+        public static bool In<T>(this T @this, params T[] vals) {
+            return vals.Contains(@this);
         }
 
         /// <summary>値が含まれているか返します</summary>
-        public static bool In<T>(this T self, IEnumerable<T> vals) {
-            return vals.Contains(self);
+        public static bool In<T>(this T @this, IEnumerable<T> vals) {
+            return vals.Contains(@this);
         }
 
         /// <summary>値が含まれているか返します</summary>
-        public static bool In<T>(this IEnumerable<T> self, params T[] vals) {
-            return self.All(_ => vals.Contains(_));
+        public static bool In<T>(this IEnumerable<T> @this, params T[] vals) {
+            return @this.All(_ => vals.Contains(_));
         }
 
         /// <summary>値が含まれているか返します</summary>
         public static bool In<T>( //
-            this IEnumerable<T> self, IEnumerable<T> vals) //
+            this IEnumerable<T> @this, IEnumerable<T> vals) //
         {
-            return self.All(_ => vals.Contains(_));
+            return @this.All(_ => vals.Contains(_));
         }
 
     }

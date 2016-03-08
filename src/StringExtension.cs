@@ -103,7 +103,7 @@ namespace ThunderEgg.Extentions {
         public static int RealLength(this string self) {
             var count = 0;
             var hi = '\0';
-            for(var i = 0; i < self.Length; ++i) {
+            for (var i = 0; i < self.Length; ++i) {
                 var lo = self[i];
                 if (!char.IsSurrogatePair(hi, lo)) {
                     hi = lo;

@@ -1,16 +1,21 @@
 ﻿/**
  * @file
- * @brief TimeSpanの拡張メソッド関係
+ * @brief TimeSpanの拡張メソッド
  * @author Yukio KANEDA
  */
 
 using System;
-using System.Runtime.CompilerServices;
 
 namespace ThunderEgg.Extentions {
 
-    /// <summary>TimeSpanの拡張メソッド関係</summary>
+    /// <summary>TimeSpanの拡張メソッド</summary>
     public static partial class TimeSpanExtension {
+
+        /// <summary>時間(TimeSpan)を返します</summary>
+        public static TimeSpan Weeks(this int weeks) {
+            var ticks = TimeSpan.TicksPerDay * 7 * weeks;
+            return TimeSpan.FromTicks(ticks);
+        }
 
         /// <summary>時間(TimeSpan)を返します</summary>
         public static TimeSpan Days(this int days) {
@@ -39,6 +44,16 @@ namespace ThunderEgg.Extentions {
         /// <summary>時間(TimeSpan)を返します</summary>
         public static TimeSpan MilliSeconds(this int msecs) {
             var ticks = TimeSpan.TicksPerMillisecond * msecs;
+            return TimeSpan.FromTicks(ticks);
+        }
+
+        //
+        //
+        //
+
+        /// <summary>時間(TimeSpan)を返します</summary>
+        public static TimeSpan Weeks(this long weeks) {
+            var ticks = TimeSpan.TicksPerDay * 7 * weeks;
             return TimeSpan.FromTicks(ticks);
         }
 
@@ -72,10 +87,20 @@ namespace ThunderEgg.Extentions {
             return TimeSpan.FromTicks(ticks);
         }
 
+        //
+        //
+        //
+
         /// <summary>時間(TimeSpan)を返します</summary>
-        public static TimeSpan Ticks(this long ticks) {
-            return TimeSpan.FromTicks(ticks);
+        public static TimeSpan Seconds(this float secs) {
+            return TimeSpan.FromSeconds(secs);
         }
+
+        /// <summary>時間(TimeSpan)を返します</summary>
+        public static TimeSpan Seconds(this double secs) {
+            return TimeSpan.FromSeconds(secs);
+        }
+
     }
 }
 

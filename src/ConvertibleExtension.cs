@@ -13,11 +13,11 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>型変換します</summary>
         /// <returns>型変換した値 / 失敗時は default(T) を返します</returns>
-        public static T To<T>(this IConvertible self) {
+        public static T To<T>(this IConvertible @this) {
             var t = typeof(T);
             t = Nullable.GetUnderlyingType(t) ?? t;
             try {
-                return (T)Convert.ChangeType(self, t);
+                return (T)Convert.ChangeType(@this, t);
             }
             catch (InvalidCastException) {
                 return default(T);
@@ -32,14 +32,14 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>型変換します</summary>
         /// <returns>型変換した値 / 失敗時は default(T) を返します</returns>
-        public static T To<T>(this string self) {
+        public static T To<T>(this string @this) {
             var t = typeof(T);
             t = Nullable.GetUnderlyingType(t) ?? t;
             try {
                 if (t.IsEnum) {
-                    return (T)Enum.Parse(t, self);
+                    return (T)Enum.Parse(t, @this);
                 }
-                return (T)Convert.ChangeType(self, t);
+                return (T)Convert.ChangeType(@this, t);
             }
             catch (InvalidCastException) {
                 return default(T);
