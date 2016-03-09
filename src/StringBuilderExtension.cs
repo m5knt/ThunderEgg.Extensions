@@ -1,5 +1,6 @@
 ﻿/**
- * @brief StringBuffer回り
+ * @file
+ * @brief StringBufferの拡張メソッド
  */
 
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace ThunderEgg.Extentions {
 
-    /// <summary>StringBuffer回り</summary>
+    /// <summary>StringBufferの拡張メソッド</summary>
     public static class StringBuilderExtension {
 
         /// <summary>バッファ内容をクリアする</summary>

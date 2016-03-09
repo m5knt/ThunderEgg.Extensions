@@ -1,7 +1,6 @@
 ﻿/**
  * @file
- * @brief 文字回りのシュガー
- * @auther Yukio KANEDA
+ * @brief charの拡張メソッド
  */
 
 using System;
@@ -9,7 +8,7 @@ using System.Globalization;
 
 namespace ThunderEgg.Extentions {
 
-    /// <summary>char型用のエクステンション</summary>
+    /// <summary>charの拡張メソッド</summary>
     public static class CharExtension {
 
         /// <summary>文字を倍精度値で返す</summary>

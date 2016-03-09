@@ -5,10 +5,6 @@
 
 using System;
 
-//
-//
-//
-
 namespace ThunderEgg.Extentions {
 
     /// <summary>計算関係</summary>
@@ -128,32 +124,38 @@ namespace ThunderEgg.Extentions {
 
         /// <summary>>整数に丸め値を返す</summary>
         /// <seealso cref="Math.Round(double, MidpointRounding)"/>
-        public static double Round(this double value, MidpointRounding mode)
-            => Math.Round(value, mode);
+        public static double Round(this double value, MidpointRounding mode) {
+            return Math.Round(value, mode);
+        }
 
         /// <summary>>整数に丸め値を返す</summary>
         /// <seealso cref="Math.Round(decimal, MidpointRounding)"/>
-        public static decimal Round(this decimal value, MidpointRounding mode)
-            => Math.Round(value, mode);
+        public static decimal Round(this decimal value, MidpointRounding mode) {
+            return Math.Round(value, mode);
+        }
 
         /// <summary>>整数に丸め値を返す</summary>
         /// <seealso cref="Math.Round(double, int)"/>
-        public static double Round(this double value, int digits)
-            => Math.Round(value, digits);
+        public static double Round(this double value, int digits) {
+            return Math.Round(value, digits);
+        }
 
         /// <seealso cref="Math.Round(decimal, int)"/>
-        public static decimal Round(this decimal value, int digits)
-            => Math.Round(value, digits);
+        public static decimal Round(this decimal value, int digits) {
+            return Math.Round(value, digits);
+        }
 
         /// <summary>>整数に丸め値を返す</summary>
         /// <seealso cref="Math.Round(double, int, MidpointRounding)"/>
-        public static double Round(this double value, int digits, MidpointRounding mode)
-            => Math.Round(value, digits, mode);
+        public static double Round(this double value, int digits, MidpointRounding mode) {
+            return Math.Round(value, digits, mode);
+        }
 
         /// <summary>>整数に丸め値を返す</summary>
         /// <seealso cref="Math.Round(decimal, int, MidpointRounding)"/>
-        public static decimal Round(this decimal value, int digits, MidpointRounding mode)
-            => Math.Round(value, digits, mode);
+        public static decimal Round(this decimal value, int digits, MidpointRounding mode) {
+            return Math.Round(value, digits, mode);
+        }
 
         //
         //

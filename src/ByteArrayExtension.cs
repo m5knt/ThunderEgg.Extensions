@@ -1,7 +1,6 @@
 ﻿/**
  * @file
  * @brief byteのエクステンションメソッド
- * @auther Yukio KANEDA
  */
 
 using System;
@@ -27,8 +26,8 @@ namespace ThunderEgg.Extentions {
         }
 
         /// <summary>ArraySegmentへ変換します</summary>
-        public static ArraySegment<byte> ToArraySegment(this byte[] @this, //
-            int offset, int count) //
+        public static ArraySegment<byte> //
+            ToArraySegment(this byte[] @this, int offset, int count) //
         { 
             return new ArraySegment<byte>(@this, offset, count);
         }

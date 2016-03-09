@@ -1,5 +1,6 @@
 ﻿/**
- * @brief StringBuffer回り
+ * @file
+ * @brief IConvertible回り
  */
 
 using System;

@@ -1,22 +1,17 @@
 ﻿/**
  * @file
- * @brief 文字列回りの拡張メソッド
- * @auther Yukio KANEDA
+ * @brief stringの拡張メソッド
  */
 
 using System;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 // using System.Runtime.CompilerServices;
 // [MethodImpl(MethodImplOptions.AggressiveInlining)]
 
 namespace ThunderEgg.Extentions {
 
-    /// <summary>stringの拡張メソッド関係</summary>
+    /// <summary>stringの拡張メソッド</summary>
     public static class StringExtension {
 
         #region static methods
