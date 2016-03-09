@@ -12,8 +12,8 @@ namespace test {
 
         [TestMethod]
         public void Add() {
-            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(new List<int> { 0 }.Add(1, 2)));
-            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(new List<int> { 0 }.Add(new[] { 1, 2 })));
+            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(new List<int> { 0 }.AddRange(1, 2)));
+            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(A.AddRange(new List<int> { 0 },new[] { 1, 2 })));
         }
     }
 }
