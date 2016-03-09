@@ -10,7 +10,7 @@ namespace ThunderEgg.Extentions {
     public static partial class A {
 
         /// <summary>値をコレクションに足します</summary>
-        public static ICollection<T> Add<T>( //
+        public static ICollection<T> AddRange<T>( //
             this ICollection<T> @this, params T[] vals) //
         {
             for (var i = 0; i < vals.Length; ++i) @this.Add(vals[i]);
@@ -18,7 +18,7 @@ namespace ThunderEgg.Extentions {
         }
 
         /// <summary>値をコレクションに足します</summary>
-        public static ICollection<T> Add<T>( //
+        public static ICollection<T> AddRange<T>( //
             this ICollection<T> @this, IEnumerable<T> vals) //
         {
             foreach (var t in vals) @this.Add(t);

@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Collections\Add.cs" />
+    <Compile Include="src\Collections\AddRange.cs" />
     <Compile Include="src\Collections\At.cs" />
     <Compile Include="src\ByteArrayExtension.cs" />
     <Compile Include="src\CharExtension.cs" />
