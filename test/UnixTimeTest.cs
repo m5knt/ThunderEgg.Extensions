@@ -11,10 +11,10 @@ namespace test {
 
     [TestClass]
     public class UnixTimeTest {
-#if false
+
         [TestMethod]
         public void Test() {
-            var epoch = UnixTime.Epoch.ToDateTime();
+            var epoch = UnixTime.Epoch.ToUniversalTime();
             Assert.AreEqual(0, epoch.Hour);
             Assert.AreEqual(1, epoch.Day);
             Assert.AreEqual(1, epoch.Month);
@@ -31,7 +31,7 @@ namespace test {
             Assert.AreEqual(9, DateTime.Now.Subtract(DateTime.UtcNow).Hours);
             var ln = DateTime.Now.ToBinary();
             var un = DateTime.UtcNow.ToBinary();
-            ln = ln;
+            //ln = ln;
 #if false
             var l = epoch.ToLocalTime();
             Assert.AreEqual(9, l.Hour);
@@ -44,6 +44,5 @@ namespace test {
             var ticks = epoch.Ticks;
 #endif
         }
-#endif
     }
 }

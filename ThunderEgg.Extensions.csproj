@@ -47,19 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Add.cs" />
-    <Compile Include="src\At.cs" />
+    <Compile Include="src\Collections\Add.cs" />
+    <Compile Include="src\Collections\At.cs" />
     <Compile Include="src\ByteArrayExtension.cs" />
     <Compile Include="src\CharExtension.cs" />
+    <Compile Include="src\Collections\Empty.cs" />
     <Compile Include="src\ConvertibleExtension.cs" />
     <Compile Include="src\DateTime\DateTimeExtension.cs" />
     <Compile Include="src\DateTime\TimeSpanExtension.cs" />
     <Compile Include="src\DateTime\UnixTime.cs" />
-    <Compile Include="src\ForEach.cs" />
-    <Compile Include="src\In.cs" />
+    <Compile Include="src\Collections\ForEach.cs" />
+    <Compile Include="src\Collections\In.cs" />
     <Compile Include="src\MathExtension.cs" />
-    <Compile Include="src\Range.cs" />
-    <Compile Include="src\Repeat.cs" />
+    <Compile Include="src\Collections\Range.cs" />
+    <Compile Include="src\Collections\Repeat.cs" />
     <Compile Include="src\StringBuilderExtension.cs" />
     <Compile Include="src\StringExtension.cs" />
   </ItemGroup>

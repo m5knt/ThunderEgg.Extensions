@@ -50,7 +50,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UTCTest.cs" />
     <Compile Include="UnixTimeTest.cs" />
     <Compile Include="DateTimeTest.cs" />
     <Compile Include="Add.cs" />
