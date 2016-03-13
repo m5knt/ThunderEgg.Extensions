@@ -52,6 +52,7 @@
     <Compile Include="src\ByteArrayExtension.cs" />
     <Compile Include="src\CharExtension.cs" />
     <Compile Include="src\Collections\Empty.cs" />
+    <Compile Include="src\Collections\Concat.cs" />
     <Compile Include="src\ConvertibleExtension.cs" />
     <Compile Include="src\DateTime\DateTimeExtension.cs" />
     <Compile Include="src\DateTime\TimeSpanExtension.cs" />

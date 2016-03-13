@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AddRange.cs" />
+    <Compile Include="ConcatTest.cs" />
     <Compile Include="UnixTimeTest.cs" />
     <Compile Include="DateTimeTest.cs" />
     <Compile Include="Misc.cs" />
