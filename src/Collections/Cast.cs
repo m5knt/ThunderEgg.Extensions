@@ -1,6 +1,6 @@
 ﻿/**
  * @file
- * @brief Repeat操作
+ * @brief Cast 操作
  */
 
 using System;

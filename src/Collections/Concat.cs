@@ -1,6 +1,6 @@
 ﻿/**
  * @file
- * @brief Repeat操作
+ * @brief Concat 操作
  */
 
 using System;

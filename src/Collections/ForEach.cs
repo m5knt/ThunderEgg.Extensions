@@ -1,6 +1,6 @@
 ﻿/**
  * @file
- * @brief ForEach操作
+ * @brief ForEach 操作
  */
 
 using System;

@@ -1,6 +1,6 @@
 ﻿/**
  * @file
- * @brief Add操作
+ * @brief AddRange 操作
  */
 
 using System.Collections.Generic;
