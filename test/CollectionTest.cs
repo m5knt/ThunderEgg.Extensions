@@ -14,8 +14,6 @@ namespace test {
         public void In() {
             Assert.IsTrue("A".In("A", "B"));
             Assert.IsTrue("A".In(new List<string>() { "A", "B" }));
-            Assert.IsTrue(new[] { "A", "B" }.In("A", "B", "C"));
-            Assert.IsFalse(new[] { "X", "A" }.In("A", "B", "C"));
         }
 
         //        [TestMethod]

@@ -35,7 +35,7 @@ namespace test {
             Assert.IsTrue(new[] { 0, 1, 2, 1, 2 }.SequenceEqual(e));
 
             //foreach (var t in Bar(0, 1)) ;
-            foreach(var t in Foo(e, 0, 3).ToEnumerable());
+            //foreach(var t in Foo(e, 0, 3).ToEnumerable());
 #if false
             var l = epoch.ToLocalTime();
             Assert.AreEqual(9, l.Hour);
