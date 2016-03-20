@@ -12,9 +12,9 @@ namespace ThunderEgg.Extentions {
     public static class StringBuilderExtension {
 
         /// <summary>バッファ内容をクリアする</summary>
-        public static StringBuilder Clear(this StringBuilder self) {
-            self.Length = 0;
-            return self;
+        public static StringBuilder Clear(this StringBuilder @this) {
+            @this.Length = 0;
+            return @this;
         }
     }
 }
