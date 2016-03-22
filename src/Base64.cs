@@ -7,7 +7,7 @@ using System;
 
 namespace ThunderEgg.Extentions {
 
-    public static partial class A {
+    public static partial class Base64Extension {
 
         /// <summary>BASE64文字列からバイト配列へ変換します</summary>
         public static byte[] Base64ToBytes(this string @this) {

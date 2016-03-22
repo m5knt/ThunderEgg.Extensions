@@ -6,9 +6,6 @@
 using System;
 using System.Text;
 
-// using System.Runtime.CompilerServices;
-// [MethodImpl(MethodImplOptions.AggressiveInlining)]
-
 namespace ThunderEgg.Extentions {
 
     /// <summary>stringの拡張メソッド</summary>
