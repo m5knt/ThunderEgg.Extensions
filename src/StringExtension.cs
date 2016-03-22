@@ -83,12 +83,6 @@ namespace ThunderEgg.Extentions {
 
         #region option
 
-        /// <summary>BASE64文字列からバイト配列へ変換します</summary>
-        /// <seealso cref="Convert.FromBase64String(string)"/>
-        public static byte[] Base64ToBytes(this string @this) {
-            return Convert.FromBase64String(@this);
-        }
-
         /// <summary>文字数を返します</summary>
         public static int RealLength(this string @this) {
             var count = 0;
