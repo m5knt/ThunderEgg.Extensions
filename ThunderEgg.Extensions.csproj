@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\ObjectExtension.cs" />
+    <Compile Include="src\IsNull.cs" />
     <Compile Include="src\Collections\AddRange.cs" />
     <Compile Include="src\Collections\At.cs" />
-    <Compile Include="src\ByteArrayExtension.cs" />
-    <Compile Include="src\CharExtension.cs" />
+    <Compile Include="src\StdTypes\ByteArrayExtension.cs" />
+    <Compile Include="src\StdTypes\CharExtension.cs" />
     <Compile Include="src\Collections\Empty.cs" />
     <Compile Include="src\Collections\Cast.cs" />
     <Compile Include="src\Collections\Concat.cs" />
@@ -61,11 +61,12 @@
     <Compile Include="src\DateTime\UnixTime.cs" />
     <Compile Include="src\Collections\ForEach.cs" />
     <Compile Include="src\Collections\In.cs" />
-    <Compile Include="src\MathExtension.cs" />
+    <Compile Include="src\StdTypes\MathExtension.cs" />
     <Compile Include="src\Collections\Range.cs" />
     <Compile Include="src\Collections\Repeat.cs" />
-    <Compile Include="src\StringBuilderExtension.cs" />
-    <Compile Include="src\StringExtension.cs" />
+    <Compile Include="src\StdTypes\StringBuilderExtension.cs" />
+    <Compile Include="src\Base64.cs" />
+    <Compile Include="src\StdTypes\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
