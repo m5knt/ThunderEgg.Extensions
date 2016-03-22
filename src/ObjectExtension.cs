@@ -4,6 +4,7 @@
  */
 
 using System;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace ThunderEgg.Extentions {
@@ -20,7 +21,6 @@ namespace ThunderEgg.Extentions {
         public static bool IsNull<T>(this T? @this) where T : struct {
             return !@this.HasValue;
         }
-
     }
 }
 
