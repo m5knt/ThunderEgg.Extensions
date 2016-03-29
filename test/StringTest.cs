@@ -61,7 +61,7 @@ namespace test {
         public void Base64() {
             var src = new byte[] { 0xaa, 0x55 };
             var a = Convert.ToBase64String(src);
-            var b = src.BytesToBase64();
+            var b = src.ToBase64();
             Assert.IsTrue(a.SequenceEqual(b));
             var x = Convert.FromBase64String(a);
             var y = b.Base64ToBytes();
