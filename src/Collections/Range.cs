@@ -38,7 +38,12 @@ namespace ThunderEgg.Extentions {
                 throw new ArgumentException();
             }
         }
-    }
 
-}
+        /// <summary>任意の値を列挙します</summary>
+        public static IEnumerable<T> //
+            Range<T>(Func<T> start, Func<T, bool> is_cont,  Func<T, T> step) //
+        {
+            for (var t = start(); is_cont(t); t = step(t)) yield return t;
+        }
+    }
 
