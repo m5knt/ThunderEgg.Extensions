@@ -21,6 +21,7 @@ namespace test {
             Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(A.Range(3).ToList()));
             Assert.IsTrue(new[] { 0, 2, 4 }.SequenceEqual(A.Range(0, 5, 2).ToList()));
             Assert.IsTrue(new[] { 0, -1, -2 }.SequenceEqual(A.Range(0, -3, -1).ToList()));
+            Assert.IsTrue(new[] { 0, 1, 2 }.SequenceEqual(A.Range(0, i => i < 3, i => i + 1).ToList()));
         }
 
         [TestMethod]
