@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Collections\Nestable.cs" />
     <Compile Include="src\StdTypes\NullExtension.cs" />
     <Compile Include="src\Collections\AddRange.cs" />
     <Compile Include="src\Collections\At.cs" />
